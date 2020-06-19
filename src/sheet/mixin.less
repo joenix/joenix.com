@@ -1,0 +1,35 @@
+.clear {
+  zoom: 1;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+    visibility: hidden;
+    overflow: hidden;
+    height: 0;
+  }
+}
+
+.flex-horizontal(@horizontal: center, @vertical: center) {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: @horizontal;
+  align-items: @vertical;
+}
+
+.flex-vertical(@horizontal: center, @vertical: center) {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: @vertical;
+  align-items: @horizontal;
+}
+
+.ratate (@value: 0deg) {
+  transform: rotate(@value);
+  -ms-transform: rotate(@value);
+  -moz-transform: rotate(@value);
+  -webkit-transform: rotate(@value);
+}

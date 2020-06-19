@@ -1,0 +1,102 @@
+::selection {
+  color: rgba(255, 255, 255, 0.85);
+  background: @color-theme;
+}
+
+:root {
+  color: @color-text;
+  background-color: @color-background;
+}
+
+header {
+  height: @space-header;
+
+  h1 {
+		color: @color-theme;
+    font-size: @size-header;
+  }
+}
+
+footer {
+  height: @space-footer;
+}
+
+main {
+  height: calc(100vh - @space-header - @space-footer);
+}
+
+header,
+footer {
+  .flex-horizontal;
+}
+
+.box {
+  position: relative;
+  width: 630px;
+  margin: 100px auto;
+}
+.lineF,
+.lineS {
+  position: absolute;
+  visibility: hidden;
+}
+.lineS {
+  top: 182px;
+  left: 105px;
+}
+.boxF,
+.boxS,
+.boxT,
+.overlay {
+  width: 200px;
+  height: 250px;
+  overflow: hidden;
+}
+.boxF,
+.boxS {
+  visibility: hidden;
+}
+.boxF {
+  .ratate(120deg);
+
+  float: left;
+  margin-left: 10px;
+}
+.boxS {
+  .ratate(-60deg);
+}
+.boxT {
+  .ratate(-60deg);
+
+  background: no-repeat 50% center;
+  background-size: 125% auto;
+  visibility: visible;
+}
+.overlay {
+  transition: all 250ms ease-in-out 0s;
+  display: none;
+  position: relative;
+}
+.overlay:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.boxT:hover .overlay {
+  display: block;
+}
+.overlay a {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -16px 0 0 -16px;
+  border-radius: 3px;
+  background-color: #d3b850;
+  text-align: center;
+  line-height: 32px;
+  width: 32px;
+  height: 32px;
+  text-decoration: none;
+  color: White;
+  font-size: 18px;
+  font-weight: bolder;
+}
