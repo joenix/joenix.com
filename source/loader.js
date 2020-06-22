@@ -1,22 +1,22 @@
 module.exports = {
 	// 规则
   rules: [
-    {
-      // Ejs 模板
-      test: /\.ejs$/,
-      // 使用
-      use: [
-        {
-          // 使用 ejs webpack 滤镜
-          loader: 'ejs-webpack-loader',
-          // 配置
-          options: {
-            // 压缩
-            htmlmin: true
-          }
-        }
-      ]
-    },
+    // {
+    //   // Ejs 模板
+    //   test: /\.ejs$/,
+    //   // 使用
+    //   use: [
+    //     {
+    //       // 使用 ejs webpack 滤镜
+    //       loader: 'ejs-webpack-loader',
+    //       // 配置
+    //       options: {
+    //         // 压缩
+    //         htmlmin: true
+    //       }
+    //     }
+    //   ]
+    // },
     {
       // Less 结尾文件
       test: /\.less$/,
@@ -30,22 +30,22 @@ module.exports = {
         { loader: 'less-loader' }
       ]
     },
-    {
-      // 图片资源
-      test: /\.(png|jpg|gif)$/,
-      // 使用
-      use: [
-        {
-          // 路径滤镜
-          loader: 'url-loader',
-          // 配置
-          options: {
-						// 容量
-            limit: false // 8192
-          }
-        }
-      ]
-    },
+    // {
+    //   // 图片资源
+    //   test: /\.(png|jpg|gif)$/,
+    //   // 使用
+    //   use: [
+    //     {
+    //       // 路径滤镜
+    //       loader: 'url-loader',
+    //       // 配置
+    //       options: {
+		// 				// 容量
+    //         limit: false // 8192
+    //       }
+    //     }
+    //   ]
+    // },
     {
       // Javascript 滤镜
       test: /\.js$/,

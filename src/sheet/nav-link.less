@@ -1,0 +1,60 @@
+.nav-link-drift {
+  position: relative;
+
+  &:after {
+    .effect;
+
+    content: ' ';
+    position: absolute;
+
+    height: 4px;
+    bottom: 0;
+    background-color: @color-theme;
+  }
+}
+
+.nav-link-close {
+  &:after {
+    width: 0;
+    left: 50%;
+  }
+}
+
+.nav-link-open {
+  &:after {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.nav-link {
+  a {
+    &,
+    &:hover {
+      color: @color-text;
+    }
+  }
+
+  &:hover {
+    a.active {
+      .nav-link-close;
+    }
+  }
+
+  a {
+    .nav-link-drift;
+    .nav-link-close;
+
+    &.active {
+      .nav-link-open;
+
+      &:hover {
+        .nav-link-open;
+      }
+    }
+
+    &:hover {
+      .nav-link-open;
+    }
+  }
+}

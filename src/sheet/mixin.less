@@ -1,8 +1,9 @@
+// Clearfix
 .clear {
   zoom: 1;
 
   &:after {
-    content: "";
+    content: '';
     display: table;
     clear: both;
     visibility: hidden;
@@ -11,8 +12,22 @@
   }
 }
 
-.flex-horizontal(@horizontal: center, @vertical: center) {
+// Floater
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+// Flex
+.flex {
   display: flex;
+}
+
+.flex-horizontal(@horizontal: center, @vertical: center) {
+  .flex;
   flex-direction: row;
 
   justify-content: @horizontal;
@@ -20,16 +35,44 @@
 }
 
 .flex-vertical(@horizontal: center, @vertical: center) {
-  display: flex;
+  .flex;
   flex-direction: column;
 
   justify-content: @vertical;
   align-items: @horizontal;
 }
 
-.ratate (@value: 0deg) {
+// Effect
+.effect(@speed: @speed-effect, @mode: all) {
+  transition: @mode @speed;
+}
+
+// Full
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+// Rotate
+.rotate (@value: 0deg) {
   transform: rotate(@value);
   -ms-transform: rotate(@value);
   -moz-transform: rotate(@value);
   -webkit-transform: rotate(@value);
+}
+
+.red {
+  color: #f55;
+}
+.purple {
+  color: #f8f;
+}
+.green {
+  color: #6dc;
+}
+.blue {
+  color: #abf;
 }

@@ -5,7 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "dev": "webpack-dev-server --open",
-		"build": "webpack"
+    "build": "rm -rf dist & webpack"
   },
   "keywords": [
     "joenix"
@@ -22,7 +22,7 @@
     "file-loader": "^6.0.0",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.2.0",
-    "less": "^3.11.1",
+    "less": "^3.11.3",
     "less-loader": "^5.0.0",
     "style-loader": "^1.1.3",
     "url-loader": "^4.1.0",

@@ -4,13 +4,21 @@
  */
 
 // Theme
-@color-theme: rgb(234, 76, 137);
+@color-theme: rgb(216, 76, 136);
+
+// Deep
+@color-theme-deep: darken(@color-theme, 48%); // rgb(82, 8, 88);
 
 // Text
-@color-text: rgb(181, 182, 183);
+@color-text: rgb(247, 248, 249);
+
+// White & Black
+@color-white: #fff;
+@color-black: #000;
 
 // Background
-@color-background: rgb(31, 32, 33);
+@color-background-from: rgb(246, 18, 168);
+@color-background-to: rgb(42, 12, 52);
 
 /**
  * Size
@@ -18,13 +26,31 @@
  */
 
 // Header Size
-@size-header: 36px;
+@size-header: 30px;
+
+// Nav Size
+@size-nav: 24px;
+
+// Section Size
+@size-section: 48px;
+
+// Size Cat
+@size-cat: 240px;
 
 /**
  * Spaces
  * ======== ======== ========
  */
 
+// Unit
+@space: 16px;
+
 // Header + Footer
-@space-header: 60px;
-@space-footer: 30px;
+@space-header: 64px;
+@space-footer: 32px;
+
+/**
+ * Speed
+ * ======== ======== ========
+ */
+@speed-effect: 0.36s;

@@ -4,17 +4,19 @@
  */
 
 // Use Source
-const { pack, loader, plugin, server } = require('./source')
+const { optimize, pack, loader, plugin, server } = require('./source')
 
 // Use Pack
 const { resolve } = pack
 
 // Export for Webpack
 module.exports = {
+	// 观察者
+	watch: true,
   // 模式
   mode: 'development',
   // 调试工具
-  devtool: 'source-map',
+  devtool: false, // 'source-map',
   // 输入
   entry: resolve(`src/main.js`),
   // 输出
@@ -43,6 +45,8 @@ module.exports = {
     errorDetails: true,
     hash: true
   },
+	// 优化
+	optimization: optimize,
   // 模块
   module: loader,
   // 插件

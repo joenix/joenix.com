@@ -11,6 +11,10 @@ module.exports = [
     template: '!!ejs-webpack-loader!src/template/index.ejs',
     // 输出文件名
     filename: `index.html`,
+    // 压缩
+    minify: true,
+    // 图标
+    // favicon:
     // 上下文
     inject: `body`,
     // 参数注入

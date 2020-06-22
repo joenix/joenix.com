@@ -14,70 +14,32 @@
 
 <body>
 
+	<!-- Header -->
+	<% include header %>
+
   <main>
-    <div class="box">
-      <!--第一行(lineFirst)-->
-      <div class="lineF">
-        <div class="boxF">
-          <div class="boxS">
-            <div
-              class="boxT"
-              style="background-image: url(<%= oss %>/joenix.com/001.jpg);"
-            >
-              <div class="overlay">
-                <a href="#">+</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="boxF">
-          <div class="boxS">
-            <div class="boxT" style="background-image: url(img/2.jpg);">
-              <div class="overlay">
-                <a href="#">+</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="boxF">
-          <div class="boxS">
-            <div class="boxT" style="background-image: url(img/3.jpg);">
-              <div class="overlay">
-                <a href="#">+</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--第二行(lineSecond)-->
-      <div class="lineS">
-        <div class="boxF">
-          <div class="boxS">
-            <div class="boxT" style="background-image: url(img/4.jpg);">
-              <div class="overlay">
-                <a href="#">+</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="boxF">
-          <div class="boxS">
-            <div class="boxT" style="background-image: url(img/5.jpg);">
-              <div class="overlay">
-                <a href="#">+</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+		<section class="context">
+			<ul>
+				<li>
+					<h2>
+						Wechat:
+						<em>ejoenix</em>
+					</h2>
+				</li>
+				<li>
+					<h2>
+						Open Source:
+						<a href="http://vue-scaff.joenix.com">Vue Scaff</a>
+					</h2>
+				</li>
+			</ul>
+		</section>
   </main>
 
-  <footer>
-    <p><%= copyright %></p>
-		<p><%= filing %></p>
-  </footer>
+	<!-- Footer -->
+	<% include footer %>
 
-  <script src="https://cdn.bootcss.com/less.js/3.11.1/less.min.js"></script>
+	<!-- Resource -->
+	<% include resource %>
 </body>
 </html>

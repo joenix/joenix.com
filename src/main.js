@@ -1,7 +1,14 @@
+// Use Less
+import 'less'
+
+// Add Style
 import './sheet/index.less'
 
-console.log(123)
+// Use Util
+import { shadow, effect } from './util'
 
-// export default {};
+// Action Mouse
+document.addEventListener('mousemove', event => shadow(event))
 
-// import "../public/index.ejs";
+// Action Logo
+effect('.logo', 'mouseover')

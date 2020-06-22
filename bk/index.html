@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+  <body>
+    <style lang="less">
+      .box {
+        position: relative;
+        width: 630px;
+        margin: 100px auto;
+      }
+      .lineF,
+      .lineS {
+        position: absolute;
+        visibility: hidden;
+      }
+      .lineS {
+        top: 182px;
+        left: 105px;
+      }
+      .boxF,
+      .boxS,
+      .boxT,
+      .overlay {
+        width: 200px;
+        height: 250px;
+        overflow: hidden;
+      }
+      .boxF,
+      .boxS {
+        visibility: hidden;
+      }
+      .boxF {
+        .rotate(120deg);
+
+        float: left;
+        margin-left: 10px;
+      }
+      .boxS {
+        .rotate(-60deg);
+      }
+      .boxT {
+        .rotate(-60deg);
+
+        background: no-repeat 50% center;
+        background-size: 150% auto;
+        visibility: visible;
+      }
+      .overlay {
+        transition: all 250ms ease-in-out 0s;
+        display: none;
+        position: relative;
+      }
+      .overlay:hover {
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+      .boxT:hover .overlay {
+        display: block;
+      }
+      .overlay a {
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: -16px 0 0 -16px;
+        border-radius: 3px;
+        background-color: #d3b850;
+        text-align: center;
+        line-height: 32px;
+        width: 32px;
+        height: 32px;
+        text-decoration: none;
+        color: White;
+        font-size: 18px;
+        font-weight: bolder;
+      }
+    </style>
+
+    <main>
+      <div class="box">
+        <!--第一行(lineFirst)-->
+        <div class="lineF">
+          <div class="boxF">
+            <div class="boxS">
+              <div
+                class="boxT"
+                style="background-image: url(<%= oss %>/joenix.com/001.jpg);"
+              >
+                <div class="overlay">
+                  <a href="#">+</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="boxF">
+            <div class="boxS">
+              <div class="boxT" style="background-image: url(img/2.jpg);">
+                <div class="overlay">
+                  <a href="#">+</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="boxF">
+            <div class="boxS">
+              <div class="boxT" style="background-image: url(img/3.jpg);">
+                <div class="overlay">
+                  <a href="#">+</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--第二行(lineSecond)-->
+        <div class="lineS">
+          <div class="boxF">
+            <div class="boxS">
+              <div class="boxT" style="background-image: url(img/4.jpg);">
+                <div class="overlay">
+                  <a href="#">+</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="boxF">
+            <div class="boxS">
+              <div class="boxT" style="background-image: url(img/5.jpg);">
+                <div class="overlay">
+                  <a href="#">+</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
