@@ -1,6 +1,9 @@
 // Use Parameter
 const param = require('./param')
 
+// Use Resolve
+const { resolve } = require('./pack')
+
 // HTML Plugin
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
@@ -14,7 +17,7 @@ module.exports = [
     // 压缩
     minify: true,
     // 图标
-    // favicon:
+    favicon: resolve(`src/resource/favicon.ico`),
     // 上下文
     inject: `body`,
     // 参数注入
