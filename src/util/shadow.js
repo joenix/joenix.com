@@ -2,6 +2,10 @@ export default event => {
   // Get Context Node
   const context = document.querySelector('.context')
 
+  if (event.touches) {
+    event = event.touches[0]
+  }
+
   // Get Mouse
   const mouse = {
     x: event.x || event.clientX,
@@ -40,6 +44,6 @@ export default event => {
     c: `rgba(0, 0, ${sin / ratio / 12}, .2)`
   }
 
-	// Set Style
+  // Set Style
   context.style.textShadow = `${style.x} ${style.y} ${style.s} ${style.c}`
 }
