@@ -7,6 +7,7 @@ const { resolve } = require('./pack')
 // HTML Plugin
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+// Export
 module.exports = [
   // Html Webpack Plugin
   new HtmlWebpackPlugin({

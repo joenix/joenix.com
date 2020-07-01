@@ -1,5 +1,5 @@
 module.exports = {
-	// 规则
+  // 规则
   rules: [
     // {
     //   // Ejs 模板
@@ -27,7 +27,18 @@ module.exports = {
         // 使用 css 滤镜
         { loader: 'css-loader' },
         // 使用 less 滤镜
-        { loader: 'less-loader' }
+        { loader: 'less-loader' },
+        // 使用 px2rem 滤镜
+        {
+          loader: 'px2rem-loader',
+          // 配置
+          options: {
+            // Unit Value
+            remUni: 67.5,
+            // Precision Value
+            remPrecision: 10
+          }
+        }
       ]
     },
     // {
@@ -40,7 +51,7 @@ module.exports = {
     //       loader: 'url-loader',
     //       // 配置
     //       options: {
-		// 				// 容量
+    // 				// 容量
     //         limit: false // 8192
     //       }
     //     }
