@@ -22,6 +22,6 @@ module.exports = [
     // 上下文
     inject: `body`,
     // 参数注入
-    templateParameters: param
-  })
+    templateParameters: param,
+  }),
 ]

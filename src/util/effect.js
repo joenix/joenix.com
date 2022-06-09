@@ -5,8 +5,14 @@ export default (selector, mode, time = 1000) => {
   // Get Class List
   const classic = element.classList
 
-  // Set Classname
-  const effect = `animate__jello`
+  // Set Animates
+  const animates = `bounce flash pulse rubberBand shakeX shakeY headShake swing tada wobble jello heartBeat`.split(' ')
+
+  // Set Animate Recursive
+  const animate = (effect = animates[Math.floor(Math.random() * animates.length)]) => (effect === last ? animate() : effect)
+
+  // Random Effect
+  const effect = () => `animate__${animate()}`
 
   // Action Runner
   const runner = classname => classic.add(classname)
@@ -19,6 +25,9 @@ export default (selector, mode, time = 1000) => {
 
   // Set Timeout
   let timeout = undefined
+
+  // Set Last
+  let last = undefined
 
   // Set Lock
   let lock = false
@@ -38,7 +47,7 @@ export default (selector, mode, time = 1000) => {
     lock = false
 
     // Remove Effect
-    remove(effect)
+    remove(effect())
   })
 
   // Mouse Event
@@ -49,9 +58,9 @@ export default (selector, mode, time = 1000) => {
     }
 
     // Clean First
-    remove(effect)
+    remove(last)
 
     // Runner Effect
-    runner(effect)
+    runner((last = effect()))
   })
 }

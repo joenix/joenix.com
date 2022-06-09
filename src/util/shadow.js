@@ -9,25 +9,25 @@ export default event => {
   // Get Mouse
   const mouse = {
     x: event.x || event.clientX,
-    y: event.y || event.clientY
+    y: event.y || event.clientY,
   }
 
   // Get Screen
   const screen = {
     w: document.body.clientWidth,
-    h: document.body.clientHeight
+    h: document.body.clientHeight,
   }
 
   // Get Screen Center
   const center = {
     x: screen.w / 2,
-    y: screen.h / 2
+    y: screen.h / 2,
   }
 
   // Get Average
   const average = {
     x: Math.abs(mouse.x - center.x),
-    y: Math.abs(mouse.y - center.y)
+    y: Math.abs(mouse.y - center.y),
   }
 
   // Get Sin
@@ -41,7 +41,7 @@ export default event => {
     x: `${(mouse.x - center.x) / -ratio}px`,
     y: `${(mouse.y - center.y) / -ratio}px`,
     s: `${sin / ratio / 12}px`,
-    c: `rgba(0, 0, ${sin / ratio / 12}, .2)`
+    c: `rgba(0, 0, ${sin / ratio / 12}, .2)`,
   }
 
   // Set Style
