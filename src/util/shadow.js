@@ -18,10 +18,16 @@ export default event => {
     h: document.body.clientHeight,
   }
 
+  // Get Ratio
+  const divisor = {
+    x: screen.w / (screen.w - 640),
+    y: screen.h / (screen.h - 360),
+  }
+
   // Get Screen Center
   const center = {
-    x: screen.w / 2,
-    y: screen.h / 2,
+    x: screen.w / divisor.x,
+    y: screen.h / divisor.y,
   }
 
   // Get Average

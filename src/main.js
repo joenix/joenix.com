@@ -5,7 +5,7 @@ import 'less'
 import './sheet/index.less'
 
 // Use Util
-import { shadow, effect } from './util'
+import { shadow, effect, colour } from './util'
 
 // Action Mouse
 document.addEventListener('mousemove', event => shadow(event))
@@ -15,3 +15,6 @@ document.addEventListener('touchmove', event => shadow(event))
 
 // Action Logo
 effect('.logo', 'mouseover')
+
+// Action Colour
+colour('[class^=picker]', 'click')

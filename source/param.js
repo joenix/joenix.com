@@ -7,5 +7,5 @@ module.exports = {
   filing: `沪ICP备20017142号-1`,
 
   oss: `http://oss.joenix.com`,
-  cdn: `https://cdn.bootcss.com`
+  cdn: `https://cdn.bootcss.com`,
 }

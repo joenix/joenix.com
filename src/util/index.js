@@ -2,4 +2,6 @@ import shadow from './shadow'
 
 import effect from './effect'
 
-export { shadow, effect }
+import colour from './colour'
+
+export { shadow, effect, colour }
