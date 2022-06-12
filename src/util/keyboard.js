@@ -13,13 +13,18 @@ export default (command, event) => {
 
   // Event Bind
   document.addEventListener(event, e => {
+    // Code
+    const code = e.keyCode
+
+    // ESC
+    if (code === 27) {
+      count = -1
+    }
+
     // Check Open
     if (open) {
       return
     }
-
-    // Code
-    const code = e.keyCode
 
     // Check Right
     if (cache[++count] !== code) {
