@@ -1,0 +1,25 @@
+.picker {
+  .flex-horizontal;
+
+  position: relative;
+
+  i {
+    .effect;
+
+    display: block;
+    cursor: pointer;
+
+    border: @radius-bit solid transparent;
+    box-sizing: content-box;
+
+    width: @space;
+    height: @space;
+    margin: @atom;
+
+    border-radius: @radius-bit;
+
+    &:hover {
+      filter: brightness(1.25);
+    }
+  }
+}

@@ -16,10 +16,10 @@ a {
 body {
   .effect(@speed-effect, background);
   .flex-vertical;
-  // background-image: url(http://oss.joenix.com/joenix.com/b.png);
+
   background-repeat: no-repeat;
   background-size: 50%;
-  background-position: center; // right bottom;
+  background-position: center;
 }
 
 header,
@@ -35,36 +35,7 @@ header {
   height: @space-header;
 
   h1 {
-    a {
-      .flex-horizontal;
-
-      font-size: @size-header;
-    }
-
-    bdo {
-      & {
-        color: #fff;
-      }
-
-      &.J {
-        color: #09c;
-      }
-      &.O {
-        color: #3cf;
-      }
-      &.E {
-        color: #3cf;
-      }
-      &.N {
-        color: #3f9;
-      }
-      &.I {
-        color: #fc3;
-      }
-      &.X {
-        color: #f93;
-      }
-    }
+    .logo;
   }
 }
 
@@ -72,29 +43,7 @@ footer {
   height: @space-footer;
 
   div {
-    position: relative;
-    .flex-horizontal;
-    flex-wrap: wrap;
-
-    i {
-      .effect;
-
-      display: block;
-      cursor: pointer;
-
-      border: @radius-bit solid transparent;
-      box-sizing: content-box;
-
-      width: @space;
-      height: @space;
-      margin: @atom;
-
-      border-radius: @radius-bit;
-
-      &:hover {
-        filter: brightness(1.25);
-      }
-    }
+    .picker;
   }
 }
 
@@ -114,39 +63,9 @@ nav {
     .flex-horizontal;
   }
 
-  span {
-    .effect;
-
-    width: 200px;
-    height: 200px;
-    top: calc(100% + @space);
-    left: 50%;
-    margin-left: -100px;
-    opacity: 0;
-    z-index: -1;
-    position: absolute;
-    border-radius: @radius;
-    box-shadow: 0 0 @shadow rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-  }
-
   img {
     .full-width;
     .full-height;
-  }
-
-  div {
-    position: relative;
-    padding: 0 @space;
-    font-size: @size-nav;
-
-    &:hover {
-      span {
-        top: 100%;
-        opacity: 1;
-        z-index: 0;
-      }
-    }
   }
 }
 
@@ -156,8 +75,10 @@ main {
 }
 
 section {
-  li {
-    line-height: 100px;
-    font-size: @size-section;
+  .flex-horizontal;
+  width: 100vw;
+
+  a {
+    .icon;
   }
 }
