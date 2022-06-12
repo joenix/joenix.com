@@ -4,4 +4,6 @@ import effect from './effect'
 
 import colour from './colour'
 
-export { shadow, effect, colour }
+import keyboard from './keyboard'
+
+export { shadow, effect, colour, keyboard }

@@ -5,7 +5,7 @@ import 'less'
 import './sheet/index.less'
 
 // Use Util
-import { shadow, effect, colour } from './util'
+import { keyboard, shadow, effect, colour } from './util'
 
 // Action Mouse
 document.addEventListener('mousemove', event => shadow(event))
@@ -18,3 +18,6 @@ effect('.logo', 'mouseover')
 
 // Action Colour
 colour('[class^=picker]', 'click')
+
+// Action Keyboard
+keyboard([], 'keyup')

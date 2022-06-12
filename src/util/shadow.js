@@ -28,9 +28,13 @@ function shadow(target, { screen, mouse }) {
 
   // Get Style
   const style = {
+    // w: `${center.x + Math.abs(mouse.x - center.x) / 6}px`,
+    // h: `${center.y + Math.abs(mouse.y - center.y) / 6}px`,
+
     x: `${(mouse.x - center.x) / -divisor.x}px`,
     y: `${(mouse.y - center.y) / -divisor.y}px`,
-    s: `${sin / divisor.x / 12}px`,
+
+    s: `${sin / divisor.x / 6}px`,
     c: `rgba(0, 0, ${sin / divisor.y / 12}, .1)`,
   }
 
