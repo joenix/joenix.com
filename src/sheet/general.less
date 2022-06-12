@@ -42,8 +42,18 @@ header {
 footer {
   height: @space-footer;
 
+  div,
+  span,
+  p {
+    flex: 1;
+  }
+
   div {
     .picker;
+  }
+
+  span {
+    .command;
   }
 }
 
