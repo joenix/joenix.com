@@ -19,6 +19,7 @@ export default (command, event) => {
     // ESC
     if (code === 27) {
       count = -1
+      open = false
     }
 
     // Check Open
