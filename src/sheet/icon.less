@@ -1,33 +1,41 @@
 .icon {
   & {
-    .effect;
-
     width: @space-icons;
-    height: @space-icons;
+    height: @space-icons + @size-icon;
 
     margin: 0 5%;
-    padding: @space;
-
-    text-align: center;
-
-    top: 0;
-    position: relative;
-
-    border-radius: @radius-large;
-    background-color: @color-text;
   }
 
   &:hover {
-    top: -@size-icon;
+    a {
+      top: -@size-icon;
+    }
 
     span {
       bottom: @size-icon * -2;
     }
   }
 
+  a,
   img,
   span {
     .effect;
+  }
+
+  a {
+    width: @space-icons;
+    height: @space-icons;
+
+    display: block;
+
+    text-align: center;
+    padding: @space;
+
+    border-radius: @radius-large;
+    background-color: @color-text;
+
+    top: 0;
+    position: relative;
   }
 
   img {
@@ -39,13 +47,12 @@
     color: @color-text;
 
     z-index: -1;
+    bottom: 0;
+    left: 0;
+    right: 0;
     position: absolute;
 
     font-size: @size-icon;
     line-height: @size-icon * 2;
-
-    bottom: 0;
-    left: 0;
-    right: 0;
   }
 }

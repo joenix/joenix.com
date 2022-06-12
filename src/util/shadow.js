@@ -44,7 +44,7 @@ function shadow(target, { screen, mouse }) {
 
 export default event => {
   // Get Context Node
-  const context = document.querySelectorAll('.context > a')
+  const context = document.querySelectorAll('.context > div > a')
 
   if (event.touches) {
     event = event.touches[0]
