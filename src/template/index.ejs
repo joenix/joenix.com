@@ -47,13 +47,17 @@
 
       white-space: nowrap;
 
-      font-size: 5.4vw;
+      font-size: 64px;
       font-family: fantasy;
 
       content: 'Remember - 1963.10.10'
     }
 
-    #loading:after {}
+    @media only screen and (max-width: 768px) {
+      #loading:before {
+        font-size: 32px;
+      }
+    }
   </style>
 </head>
 
