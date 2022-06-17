@@ -13,24 +13,66 @@
   <title>
     <%= title %>
   </title>
+  <style>
+    @keyframes spin {
+      from {
+        opacity: 1;
+      }
+
+      to {
+        opacity: 0;
+        display: none;
+      }
+    }
+
+    #loading {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 999;
+      position: fixed;
+      background: #fff url(<%=oss%>/joenix.com/hero.svg) center / cover no-repeat;
+      animation: spin 1s linear 3s 1 normal forwards;
+    }
+
+    #loading:before {
+      right: 10px;
+      bottom: 10px;
+
+      z-index: 1000;
+      position: fixed;
+
+      color: #444;
+      font-size: 64px;
+      font-family: fantasy;
+
+      content: 'Remember - 1963.10.10'
+    }
+
+    #loading:after {}
+  </style>
 </head>
 
 <body class="theme-1">
+  <!-- Loading -->
+  <div id="loading"></div>
+
   <!-- Header -->
   <% include header %>
 
-  <main>
-    <!-- Resource -->
-    <% include resource %>
-  </main>
+    <main>
+      <!-- Resource -->
+      <% include resource %>
+    </main>
 
-  <!-- Footer -->
-  <% include footer %>
+    <!-- Footer -->
+    <% include footer %>
 </body>
 
 <script>
   var _hmt = _hmt || [];
-  (function() {
+  (function () {
     var hm = document.createElement("script");
     hm.src = "https://hm.baidu.com/hm.js?f28166f909dd8ea13c572032a2c3316b";
     var s = document.getElementsByTagName("script")[0];
