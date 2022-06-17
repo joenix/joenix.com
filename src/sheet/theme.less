@@ -5,17 +5,14 @@
   // Active
   @color-active: lighten(@theme, 6%);
 
-  // Background
-  @color-background-from: multiply(@theme, @color-white);
-  @color-background-to: multiply(@theme, @color-black);
-
   // Selection
   ::selection {
     background: @theme;
   }
 
   & {
-    background: radial-gradient(@color-background-from, @color-background-to);
+    background-size: cover;
+    background-color: @theme;
   }
 
   a {

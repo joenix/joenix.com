@@ -1,3 +1,7 @@
+// Use Trigger
+import trigger from './trigger'
+
+// Animation Shadow
 function shadow(target, { screen, mouse }) {
   // Get Context Screen
   const view = {
@@ -43,9 +47,7 @@ function shadow(target, { screen, mouse }) {
 }
 
 export default event => {
-  // Get Context Node
-  const context = document.querySelectorAll('.context > div > a')
-
+  // Mobile Touch
   if (event.touches) {
     event = event.touches[0]
   }
@@ -62,8 +64,6 @@ export default event => {
     h: document.body.clientHeight,
   }
 
-  // Shadow Method
-  for (const target of context) {
-    shadow(target, { screen, mouse })
-  }
+  // Trigger Shadow
+  trigger('.context > div > a', element => shadow(element, { screen, mouse }))
 }

@@ -14,12 +14,23 @@ a {
 }
 
 body {
-  .effect(@speed-effect, background);
+  .effect(@speed-effect);
   .flex-vertical;
 
   background-repeat: no-repeat;
   background-size: 50%;
   background-position: center;
+
+  &:after {
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    position: fixed;
+    background-image: radial-gradient(transparent, @color-black);
+  }
 }
 
 header,

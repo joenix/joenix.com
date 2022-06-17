@@ -1,3 +1,4 @@
+// Module
 export default (selector, mode, time = 1000) => {
   // Get Element
   const element = document.querySelector(selector)
@@ -22,9 +23,6 @@ export default (selector, mode, time = 1000) => {
 
   // Action Init
   const init = () => classic.add('animate__animated')
-
-  // Set Timeout
-  let timeout = undefined
 
   // Set Last
   let last = undefined

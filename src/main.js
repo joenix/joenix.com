@@ -1,11 +1,24 @@
 // Use Less
 import 'less'
 
-// Add Style
+// Use Style
 import './sheet/index.less'
+import trigger from './util/trigger'
 
-// Use Util
-import { keyboard, shadow, effect, colour } from './util'
+// Getter
+function importer(modules) {
+  // Get Modules as ES-Module
+  const es = modules.keys().map(key => [key.replace(/(\.\/)|(\.js)/g, ''), modules(key).default])
+
+  // Export ES
+  return Object.fromEntries(es)
+}
+
+// Get Util
+const { keyboard, shadow, effect, colour } = importer(require.context('./util', false, /\S.js$/))
+
+// Action Keyboard
+document.addEventListener('keyup', event => keyboard(event, [87, 87, 83, 83, 65, 68, 65, 68, 75, 74, 75, 74]))
 
 // Action Mouse
 document.addEventListener('mousemove', event => shadow(event))
@@ -14,10 +27,7 @@ document.addEventListener('mousemove', event => shadow(event))
 document.addEventListener('touchmove', event => shadow(event))
 
 // Action Logo
-effect('.logo', 'mouseover')
+effect('.logo', 'mouseenter')
 
 // Action Colour
 colour('[class^=picker]', 'click')
-
-// Action Keyboard
-keyboard([], 'keyup')

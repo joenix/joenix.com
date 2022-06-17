@@ -1,25 +1,39 @@
-export default (selector, mode) => {
-  // Get Elements
-  const elements = document.querySelectorAll(selector)
+// Use Trigger
+import trigger from './trigger'
 
-  // Loop Of
-  for (let element of elements) {
+// Module
+export default (selector, mode) => {
+  // Trigger Elements
+  trigger(selector, element => {
     // Bind Event
-    element.addEventListener(mode, e => {
+    element.addEventListener(mode, ({ target }) => {
       // Clean Classname
-      for (let active of elements) {
+      trigger(selector, ({ classList }) => {
         // Remove Active
-        if (active.classList.contains(`active`)) active.classList.remove(`active`)
-      }
+        if (classList.contains(`active`)) classList.remove(`active`)
+      })
+
+      // Get Class
+      const { classList } = target,
+        active = classList[0]
 
       // Add Active
-      e.target.classList.add(`active`)
+      target.classList.add(`active`)
 
       // Get Theme
-      const theme = e.target.classList[0].replace('picker', 'theme')
+      const theme = target.classList[0].replace('picker', 'theme')
+
+      // Get Index
+      const index = target.classList[0].match(/\d+/).shift()
+
+      // const index = e.target
+      console.log(target.classList[0].match(/\d/))
 
       // Set Theme
       document.body.setAttribute('class', theme)
+
+      // Set Favicon
+      document.querySelector('head > link[rel=icon]').setAttribute('href', `http://oss.joenix.com/joenix.com/icos/favicon-${index}.ico`)
     })
-  }
+  })
 }
