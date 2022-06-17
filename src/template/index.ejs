@@ -25,7 +25,7 @@
       }
     }
 
-    #loading {
+    #spin {
       top: 0;
       left: 0;
       right: 0;
@@ -38,10 +38,9 @@
       align-items: center;
 
       background: #fff url(<%=oss%>/joenix.com/hero.svg) center / cover no-repeat;
-      animation: spin 1s linear 3s 1 normal forwards;
     }
 
-    #loading:before {
+    #spin:before {
       color: #444;
       white-space: nowrap;
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -49,12 +48,16 @@
       font-family: fantasy;
       content: 'Remember - 1963.10.10'
     }
+
+    #spin.motion {
+      animation: spin 0.24s linear 2.4s 1 normal forwards;
+    }
   </style>
 </head>
 
 <body class="theme-1">
   <!-- Loading -->
-  <div id="loading"></div>
+  <div id="spin"></div>
 
   <!-- Header -->
   <% include header %>

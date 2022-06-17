@@ -15,7 +15,10 @@ function importer(modules) {
 }
 
 // Get Util
-const { keyboard, shadow, effect, colour } = importer(require.context('./util', false, /\S.js$/))
+const { init, keyboard, shadow, effect, colour } = importer(require.context('./util', false, /\S.js$/))
+
+// Action Ready State Change
+document.addEventListener('readystatechange', event => init(event))
 
 // Action Keyboard
 document.addEventListener('keyup', event => keyboard(event, [87, 87, 83, 83, 65, 68, 65, 68, 75, 74, 75, 74]))
