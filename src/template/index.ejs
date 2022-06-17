@@ -32,31 +32,21 @@
       bottom: 0;
       z-index: 999;
       position: fixed;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
       background: #fff url(<%=oss%>/joenix.com/hero.svg) center / cover no-repeat;
       animation: spin 1s linear 3s 1 normal forwards;
     }
 
     #loading:before {
-      right: 10px;
-      bottom: 10px;
-
-      z-index: 1000;
-      position: fixed;
-
       color: #444;
-
       white-space: nowrap;
-
-      font-size: 64px;
+      font-size: 480%;
       font-family: fantasy;
-
       content: 'Remember - 1963.10.10'
-    }
-
-    @media only screen and (max-width: 575.98px) {
-      #loading:before {
-        font-size: 32px !important;
-      }
     }
   </style>
 </head>
