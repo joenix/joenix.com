@@ -65,6 +65,11 @@
   -webkit-transform: rotate(@value);
 }
 
+// Shadow
+.shadow (@value: 2px, @alpha: 0.125) {
+  text-shadow: 0 0 @value rgba(0, 0, 0, @alpha);
+}
+
 .red {
   color: #f55;
 }
