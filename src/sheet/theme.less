@@ -14,6 +14,10 @@
     background-color: @theme;
   }
 
+  &:after {
+    background-image: radial-gradient(transparent, darken(spin(@theme, 16%), 32%));
+  }
+
   a {
     &:hover,
     &:active {
